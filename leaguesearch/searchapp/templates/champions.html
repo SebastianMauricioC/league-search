@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Champions</title>
+</head>
+<body>
+
+{% block content %}
+
+    <div class="container">
+        <h1>Champion list</h1>
+    </div>
+    {% for champion in champions %}
+        <div class="container text-center">
+            <div style="margin-bottom: 5vh" class="row">
+                <div class="col">
+                    <h2>{{ champion.champion_name }}</h2>
+                    <h4>{{ champion.champion_title }}</h4>
+                    <h6>Attack: {{ champion.champion_attack }} / 10</h6>
+                    <h6>Defense: {{ champion.champion_defense }} / 10</h6>
+                    <h6>Magic: {{ champion.champion_magic }} / 10</h6>
+                    <h6>Difficulty: {{ champion.champion_difficulty }} / 10</h6>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+
+{% endblock %}
+
+</body>
+</html>
